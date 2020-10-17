@@ -1,26 +1,17 @@
-public class factorial {
+import java.util.*;
+class Factorial 
+{
+	public static void main(String[] args) 
+	{
+		int f=1;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int i=sc.nextInt();
+		for(;i>1;i--)
+		{
+			f=f*i;
+		}
+		System.out.println("factorial = "+f);
 
-	public static void main(String[] args) {
-		int num = 3;
-		int r = factorial(num);
-		if(r == -1)
-			System.out.println("Error occured. Unable to do negative numbers");
-		else
-			System.out.println("\n\n" + num + "! Factorial is: " + r);
 	}
-
-	public static int factorial(int n) {
-		if(n < 0)
-			return -1;
-		else
-			return factorial(1, n, 1);
-	}
-
-	public static int factorial(int a, int n, int total) {
-		if(a-1 == n)
-			return total;
-		else
-			return factorial(a+1, n, total*a);
-	}
-
 }
